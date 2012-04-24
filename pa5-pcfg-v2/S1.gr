@@ -1,0 +1,47 @@
+# The start symbol is START.
+
+# These two rules are required; choose their weights carefully!
+99	START	S1
+1	START	S2
+
+# This is a very, very, very simple grammar to get you started.
+
+# statement sentence
+1	S1	NP VP .
+
+1	VP	VerbT NP
+1	VP	NP
+1	VP	Misc PP
+1	VP	NP VP
+
+20	NP	Det Nbar
+1	NP	Proper
+1	NP	VerbI PP 
+1	NP	Misc NP
+1	NP	Misc
+1	NP	Prep NP
+1	NP	Proper NP
+
+20	Nbar	Noun
+1	Nbar	Nbar PP
+1	Nbar	NP
+
+1	PP	Prep NP
+1	PP	Misc NP
+
+# ! sentence
+1	S1	NP VP !
+
+
+# question sentence ,is, what ....
+1	S1	QP NP VP ?
+1	QP	Misc
+1	QP	Misc Misc
+
+# have not finished yet...
+
+
+
+
+
+
